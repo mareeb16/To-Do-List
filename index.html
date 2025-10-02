@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>To-Do List</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div>
+        <h1>To-Do List</h1>
+        <p>Quick, accessible, and saved in your browser (localStorage).</p>
+      </div>
+    </header>
+
+    <section class="card">
+      <div class="adder">
+        <input id="newTask" type="text" placeholder="Add a new task and press Enter..." />
+        <button id="addBtn">Add</button>
+      </div>
+
+      <div class="controls">
+        <div class="filters">
+          <button class="filter active" data-filter="all">All</button>
+          <button class="filter" data-filter="active">Active</button>
+          <button class="filter" data-filter="completed">Completed</button>
+        </div>
+        <div class="extras">
+          <div class="count"><span id="leftCount">0</span> left</div>
+          <button class="clear" id="clearCompleted">Clear completed</button>
+        </div>
+      </div>
+
+      <ul class="list" id="taskList"></ul>
+      <div class="empty" id="emptyMsg">No tasks yet 🎉</div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+<script src="app.js"></script>
+</html>
