@@ -1,13 +1,13 @@
-const input = document.getElementById("newTask");
-const addBtn = document.getElementById("addBtn");
-const taskList = document.getElementById("taskList");
-const leftCount = document.getElementById("leftCount");
-const clearCompleted = document.getElementById("clearCompleted");
-const filters = document.querySelectorAll(".filter");
-const emptyMsg = document.getElementById("emptyMsg");
+var input = document.getElementById("newTask");
+var addBtn = document.getElementById("addBtn");
+var taskList = document.getElementById("taskList");
+var leftCount = document.getElementById("leftCount");
+var clearCompleted = document.getElementById("clearCompleted");
+var filters = document.querySelectorAll(".filter");
+var emptyMsg = document.getElementById("emptyMsg");
 
-let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
-let filter = "all";
+var tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+var filter = "all";
 
 
 function saveTasks() {
@@ -17,7 +17,7 @@ function saveTasks() {
 
 function render() {
   taskList.innerHTML = "";
-  let visibleTasks = tasks.filter(t =>
+  var visibleTasks = tasks.filter(t =>
     filter === "active" ? !t.completed :
     filter === "completed" ? t.completed : true
   );
@@ -29,10 +29,10 @@ function render() {
   }
 
   visibleTasks.forEach((task, index) => {
-    let li = document.createElement("li");
+    var li = document.createElement("li");
     li.className = `item ${task.completed ? "completed" : ""}`;
 
-    let check = document.createElement("div");
+    var check = document.createElement("div");
     check.className = "check";
     check.innerHTML = task.completed ? "✔" : "";
     check.onclick = () => {
@@ -41,14 +41,14 @@ function render() {
       render();
     };
 
-    let title = document.createElement("span");
+    var title = document.createElement("span");
     title.className = "title";
     title.textContent = task.text;
 
-    let actions = document.createElement("div");
+    var actions = document.createElement("div");
     actions.className = "actions";
 
-    let delBtn = document.createElement("button");
+    var delBtn = document.createElement("button");
     delBtn.textContent = "✖";
     delBtn.onclick = () => {
       tasks.splice(index, 1);
@@ -68,7 +68,7 @@ function render() {
 
 
 function addTask() {
-  let text = input.value.trim();
+  var text = input.value.trim();
   if (text) {
     tasks.push({ text, completed: false });
     saveTasks();
@@ -100,3 +100,4 @@ input.addEventListener("keydown", e => { if (e.key === "Enter") addTask(); });
 
 
 render();
+
