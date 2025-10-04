@@ -5,7 +5,8 @@
 
 *{box-sizing:border-box}
 
-body{margin:0;
+body{
+  margin:0;
   min-height:100vh;
   background:#071527;
   color:#e6eef8;
@@ -14,30 +15,36 @@ body{margin:0;
      justify-content:center;
      padding:28px
     }
-.wrap{width:100%;
+.wrap{
+  width:100%;
   max-width:720px
 }
 
-header h1{margin:0;
+header h1{
+  margin:0;
   font-size:20px
 }
-header p{margin:0;
+header p{
+  margin:0;
   color:var(--muted);
   font-size:13px;
   margin-bottom:18px
 }
 
-.card{background:var(--card);
+.card{
+  background:var(--card);
   border-radius:12px;
   padding:20px;
   box-shadow:0 8px 30px rgba(0,0,0,0.4)
 }
 
-.adder{display:flex;
+.adder{
+  display:flex;
   gap:10px;
   margin-bottom:14px
 }
-.adder input{flex:1;
+.adder input{
+  flex:1;
   padding:12px 14px;
   border-radius:10px;
   border:1px solid rgba(255,255,255,0.04);
@@ -53,7 +60,9 @@ header p{margin:0;
               color:white;
               font-weight:600;
               cursor:pointer}
-.adder button:active{transform:translateY(1px)
+
+.adder button:active{
+  transform:translateY(1px)
 }
 
 .controls {
@@ -174,4 +183,5 @@ li.item.completed {
   align-items: center;
   justify-content: center;
 }
+
 
