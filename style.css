@@ -5,8 +5,7 @@
 
 *{box-sizing:border-box}
 
-body{
-  margin:0;
+body{margin:0;
   min-height:100vh;
   background:#071527;
   color:#e6eef8;
@@ -15,36 +14,30 @@ body{
      justify-content:center;
      padding:28px
     }
-.wrap{
-  width:100%;
+.wrap{width:100%;
   max-width:720px
 }
 
-header h1{
-  margin:0;
+header h1{margin:0;
   font-size:20px
 }
-header p{
-  margin:0;
+header p{margin:0;
   color:var(--muted);
   font-size:13px;
   margin-bottom:18px
 }
 
-.card{
-  background:var(--card);
+.card{background:var(--card);
   border-radius:12px;
   padding:20px;
   box-shadow:0 8px 30px rgba(0,0,0,0.4)
 }
 
-.adder{
-  display:flex;
+.adder{display:flex;
   gap:10px;
   margin-bottom:14px
 }
-.adder input{
-  flex:1;
+.adder input{flex:1;
   padding:12px 14px;
   border-radius:10px;
   border:1px solid rgba(255,255,255,0.04);
@@ -60,9 +53,7 @@ header p{
               color:white;
               font-weight:600;
               cursor:pointer}
-
-.adder button:active{
-  transform:translateY(1px)
+.adder button:active{transform:translateY(1px)
 }
 
 .controls {
@@ -165,8 +156,16 @@ li.item.completed {
   border: 0;
   color: var(--muted);
   cursor: pointer;
-  font-size: 14px;
+  font-size: 18px;   /* increased size */
+  padding: 4px 6px;  /* gives space around icon */
+  transition: 0.2s ease;
 }
+
+.actions button:hover {
+  color: white;
+  transform: scale(1.2); /* adds a nice hover pop */
+}
+
 
 .actions button:hover {
   color: white;
@@ -184,4 +183,14 @@ li.item.completed {
   justify-content: center;
 }
 
+
+.edit-input {
+  flex: 1;
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid rgba(255,255,255,0.2);
+  background: rgba(255,255,255,0.05);
+  color: inherit;
+  font-size: 15px;
+}
 
